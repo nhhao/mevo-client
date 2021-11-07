@@ -19,4 +19,4 @@ yarn # or npm install
 yarn dev
 ```
 
-Start the development server on http://localhost:3000. You can also open it on another device (such as a phone) at http://your-ip-address:3000, as long as this device has the same connection to the development server.
+Start the development server on http://localhost:3000. You can also open it on another device (such as a phone) at http://your-ip-address:3000, as long as this device has the same wifi connection to the development server.
