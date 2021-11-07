@@ -2,7 +2,7 @@
   <div class="fixed bottom-0 -mx-4 w-full bg-white">
     <div class="h-px w-screen bg-gray-200"></div>
     <div class="mt-3 mx-6 mb-4 flex justify-between items-center">
-      <nuxt-link to="/" @click="highlightTabIcon">
+      <nuxt-link to="/">
         <HomeIcon :class="homeIconClass" />
       </nuxt-link>
       <nuxt-link to="/search">
@@ -28,6 +28,12 @@ import MevoIcon from '@/components/home/tabbar/MevoIcon.vue'
 import BellIcon from '@/components/home/tabbar/BellIcon.vue'
 
 export default {
+  components: {
+    HomeIcon,
+    SearchIcon,
+    MevoIcon,
+    BellIcon,
+  },
   data() {
     return {
       currentTab: null,
@@ -40,12 +46,6 @@ export default {
     bellIconClass() {
       return this.currentTab === '/notifications' ? 'text-primary-500' : ''
     },
-  },
-  components: {
-    HomeIcon,
-    SearchIcon,
-    MevoIcon,
-    BellIcon,
   },
   watch: {
     $route() {

@@ -29,9 +29,9 @@
       </p>
     </div>
     <div class="flex items-center mt-4 space-x-8">
-      <button class="flex items-center space-x-1">
+      <button class="flex items-center space-x-1" @click="togglePlay">
         <nuxt-img src="/icons/play.svg" />
-        <span class="text-sm text-gray-500">{{ post.duration }}</span>
+        <span class="text-sm text-gray-500">{{ remainingTime }}</span>
       </button>
       <div class="flex items-center space-x-1">
         <nuxt-img src="/icons/heart-filled.svg" />
@@ -51,11 +51,51 @@
 </template>
 
 <script>
+const timeFormat = (duration) => {
+  const hrs = ~~(duration / 3600)
+  const mins = ~~((duration % 3600) / 60)
+  const secs = ~~duration % 60
+
+  let ret = ''
+
+  if (hrs > 0) {
+    ret += '' + hrs + ':' + (mins < 10 ? '0' : '')
+  }
+
+  ret += '' + mins + ':' + (secs < 10 ? '0' : '')
+  ret += '' + secs
+  return ret
+}
+
 export default {
   props: {
     post: {
       type: Object,
       required: true,
+    },
+  },
+  data() {
+    return {
+      audioFile: null,
+      remainingTime: '0:00',
+    }
+  },
+  mounted() {
+    this.audioFile = new Audio(this.post.audioUrl)
+    this.audioFile.onloadedmetadata = () => {
+      this.remainingTime = timeFormat(this.audioFile.duration)
+    }
+  },
+  methods: {
+    togglePlay() {
+      if (this.$store.state.playerStatus === 'playing') {
+        this.$store.state.currentAudio.pause()
+      }
+      this.$store.dispatch('selectAudio', this.post).then(() => {
+        this.$store.dispatch('changePlayerStatus', 'playing').then(() => {
+          this.$store.state.currentAudio.play()
+        })
+      })
     },
   },
 }

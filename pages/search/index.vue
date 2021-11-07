@@ -1,8 +1,8 @@
 <template>
   <div class="">
     <form
-      @submit.prevent="searchHandler"
       class="-ml-2 mt-4 flex items-center space-x-1.5"
+      @submit.prevent="searchHandler"
     >
       <nuxt-link to="/">
         <nuxt-img src="icons/back.svg" />
@@ -26,7 +26,7 @@
     <div class="mt-4 mx-4 grid grid-cols-4 gap-4">
       <div
         v-for="result in recentSearches"
-        :key="result"
+        :key="result._id"
         class="col-span-1 flex flex-col items-center space-y-1.5"
       >
         <div class="w-14 h-14 rounded-md overflow-hidden">
@@ -45,6 +45,7 @@
 <script>
 import recentSearchesData from '@/data/recentSearches'
 export default {
+  layout: 'empty',
   data() {
     return {
       recentSearches: {},
@@ -53,14 +54,13 @@ export default {
       },
     }
   },
-  layout: 'empty',
-  methods: {
-    searchHandler() {},
-  },
   created() {
     this.recentSearches = {
       ...recentSearchesData.recentSearches,
     }
+  },
+  methods: {
+    searchHandler() {},
   },
 }
 </script>

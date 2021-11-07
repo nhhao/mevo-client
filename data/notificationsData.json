@@ -1,0 +1,52 @@
+{
+  "notifications": [
+    {
+      "_id": 1,
+      "author": "Bich Hanh",
+      "time": "15 phút",
+      "content": "and 48 other people reacted to your post",
+      "avatarUrl": "https://images.pexels.com/photos/3236765/pexels-photo-3236765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "isSeen": true
+    },
+    {
+      "_id": 2,
+      "author": "Maximilian",
+      "time": "3 giờ trước",
+      "content": "mentioned you in a comment",
+      "avatarUrl": "https://www.filepicker.io/api/file/TBHtUzkDTCykklB8apdG",
+      "isSeen": false
+    },
+    {
+      "_id": 3,
+      "author": "Mosh Hamedani",
+      "time": "2 ngày trước",
+      "content": "sent you a friend request",
+      "avatarUrl": "https://img4.thuthuatphanmem.vn/uploads/2020/05/25/hinh-anh-anime-toc-bach-kim-co-chuot-dang-yeu_093203680.jpg",
+      "isSeen": true
+    },
+    {
+      "_id": 4,
+      "author": "Bich Hanh",
+      "time": "15 phút",
+      "content": "and 48 other people reacted to your post",
+      "avatarUrl": "https://images.pexels.com/photos/3236765/pexels-photo-3236765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "isSeen": true
+    },
+    {
+      "_id": 5,
+      "author": "Maximilian",
+      "time": "3 giờ trước",
+      "content": "mentioned you in a comment",
+      "avatarUrl": "https://www.filepicker.io/api/file/TBHtUzkDTCykklB8apdG",
+      "isSeen": true
+    },
+    {
+      "_id": 6,
+      "author": "Luong Vi Minh",
+      "time": "2 ngày trước",
+      "content": "sent you a friend request",
+      "avatarUrl": "https://img4.thuthuatphanmem.vn/uploads/2020/05/25/hinh-anh-anime-toc-bach-kim-co-chuot-dang-yeu_093203680.jpg",
+      "isSeen": false
+    }
+  ]
+}
