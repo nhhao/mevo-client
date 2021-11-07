@@ -1,7 +1,7 @@
 # Welcom to MOVE - the podcast social network you love!
 
 > - This project is in development. So there are a lot of features that may not work yet. We're trying to finish them soon
-> - Currently we only make for mobile screen, so please view the site in responsive mode, or just view it on your phone. 
+> - Currently we only make for mobile screen, so please view the site in responsive mode, or just view it on your phone.
 
 <img src="./static/Screenshot.jpeg" alt="MEVO screenshot" height="672" />
 
@@ -19,4 +19,4 @@ yarn # or npm install
 yarn dev
 ```
 
-Start the development server on http://localhost:3000. You can also open it on another device (such as a phone) at http://<your-ip-address>:3000, as long as this device has the same connection to the development server.
+Start the development server on http://localhost:3000. You can also open it on another device (such as a phone) at http://your-ip-address:3000, as long as this device has the same connection to the development server.
